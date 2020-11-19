@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  include UsersHelper
+  before_action :require_login, except: [:new, :create]
+
   def new
     @user = User.new
   end
@@ -6,16 +9,12 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_param)
     if @user.save
+      session[:user_id] = @user.id
       flash[:notice] = 'Successful'
       redirect_to root_path
     else
       flash[:alert] = 'Failed'
       render 'new'
     end
-  end
-
-  private
-  def user_param
-    params.require(:user).permit(:name)
   end
 end
