@@ -10,10 +10,25 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-info">
-      <div>go</div>
-      <div>go</div>
-      <div>go</div>
+    <% if flash[:notice] %>
+      <div class="notification bg-success global-notification">
+        <p class="notice"><%= notice %></p>
+      </div>
+    <% end %>
+    <% if flash[:alert] %>
+      <div class="notification bg-danger global-notification">
+        <p class="alert"><%= alert %></p>
+      </div>
+    <% end %>
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand">Eventmania</a>
+      <form class="form-inline">
+        <button class="btn btn-outline-success mr-2 my-2 my-sm-0" type="submit">Create Event</button>
+        <p>
+          <%= link_to 'Sign Up', new_user_path, class: "btn btn-outline-success mr-2 my-2 my-sm-0" %>
+        </p>
+        <button class="btn btn-outline-success mr-2 my-2 my-sm-0" type="submit">Sign Up</button>
+      </form>
     </nav>
     <%= yield %>
   </body>
