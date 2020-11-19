@@ -1,1 +1,15 @@
-<div class="container"></div>
+<div class="container">
+  <h4>Upcoming events</h4>
+  <div class="row">
+    <% @events.each do |event| %>
+    <div class="card col mt-3 mr-3 shadow p-3 mb-5 bg-white rounded" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title"><%= link_to event.name, event_path(event), class: "text-success" %></h5>
+          <p class="card-text"><%= event.description %></p>
+          <p class="card-text"><%= event.location %></p>
+          <p class="card-text"><%= event.date %></p>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>

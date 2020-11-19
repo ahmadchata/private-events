@@ -3,7 +3,7 @@ class EventsController < ApplicationController
   before_action :require_login, except: [:index]
 
   def index
-    @event = Event.all
+    @events = Event.all
   end
 
   def new

@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="text-center">
+    <h1>
+      This is <%= @current_user.name %>'s Profile
+    </h1>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h4>Hosted events: <%= @current_user.events.count %></h4>
+      <ul class="list-group">
+        <% @user.events.each do |event| %>
+          <li class="list-group-item"> <%= link_to event.name, event_path(event) %></li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="col">
+      <h4>Upcoming events</h4>
+    </div>
+    <div class="col">
+      <h4>Attended events</h4>
+    </div>
+  </div>
+</div>
