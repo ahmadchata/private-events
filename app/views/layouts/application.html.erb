@@ -11,17 +11,17 @@
 
   <body>
     <% if flash[:notice] %>
-      <div class="notification bg-success global-notification">
+      <div class="bg-success">
         <p class="notice"><%= notice %></p>
       </div>
     <% end %>
     <% if flash[:alert] %>
-      <div class="notification bg-danger global-notification">
+      <div class="bg-danger">
         <p class="alert"><%= alert %></p>
       </div>
     <% end %>
     <nav class="navbar navbar-light bg-light">
-      <a class="navbar-brand"><%= link_to "Eventmania", root_path, class: ""%></a>
+      <a class="navbar-brand"><%= link_to "Eventmania", root_path, class: "navbar-brand" %></a>
       <form class="form-inline">
         <p>
           <%= link_to 'Create Event', new_event_path, class: "btn btn-outline-success mr-2 my-2 my-sm-0" %>
