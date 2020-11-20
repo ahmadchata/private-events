@@ -25,7 +25,7 @@ class EventsController < ApplicationController
     end
   end
 
-  def attendance
+  def attend
     @event = Event.find(params[:id])
     if @event.attendees.include?(current_user)
       redirect_to @event, notice: "You are already on the list"
@@ -35,7 +35,7 @@ class EventsController < ApplicationController
     end
   end
 
-  def cancel_attendance
+  def cancel_attend
     @event = Event.find(params[:id])
     @event.attendees.delete(current_user)
     redirect_to @event, notice: "You are no longer attending this event"

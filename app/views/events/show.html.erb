@@ -11,8 +11,8 @@
       <li class="list-group-item">By: <%= @event.date %></li>
     </ul>
     <div class="card-body">
-      <a> <%=link_to 'Back to event list', root_path, class: "card-link" %></a>
-      <a href="#" class="card-link">Attend</a>
+      <a> <%= link_to 'Back to event list', root_path, class: "card-link" %></a>
+      <a> <%= link_to 'Attend', event_path, class: "card-link ml-3" %></a>
     </div>
   </div>
   <div class="card col mt-3 text-center shadow p-3 mb-5 bg-white rounded" style="width: 30rem;">
