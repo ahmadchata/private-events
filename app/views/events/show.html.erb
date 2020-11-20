@@ -14,9 +14,9 @@
       <a> <%= link_to 'Back to event list', root_path, class: "card-link mr-3" %></a>
       <a>
       <% if @event.attendees.include?(current_user) %>
-        <%= link_to 'Attend', attend_event_path, class: "card-link" %>
-      <% else %>
         <%= link_to 'Cancel', cancel_event_path, class: "card-link" %>
+      <% else %>
+        <%= link_to 'Attend', attend_event_path, class: "card-link" %>
       <% end %>
       </a>
     </div>
@@ -29,8 +29,8 @@
       <% if @event.attendees.empty? %>
       <li class="list-group-item text-muted">This event has no attendees yet</li>
       <% else %>
-      <% @event.attendees.each do |at| %>
-        <li class="list-group-item"><%= @at.name %></li>
+      <% @event.attendees.each do |attendee| %>
+        <li class="list-group-item"><%= attendee.name %></li>
       <% end %>
       <% end %>
     </ul>
