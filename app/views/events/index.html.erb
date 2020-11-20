@@ -2,7 +2,7 @@
   <h4>Upcoming events</h4>
   <div class="row">
     <% @events.upcoming.each do |event| %>
-    <div class="card col mt-3 mr-3 shadow p-3 mb-5 bg-white rounded" style="width: 18rem;">
+    <div class="card col-4 mt-2 shadow p-3 mb-5 bg-white rounded" style="width: 18rem;">
       <div class="card-body">
         <h5 class="card-title"><%= link_to event.name, event_path(event), class: "text-success" %></h5>
           <p class="card-text"><%= event.description %></p>
@@ -18,7 +18,7 @@
   <h4>Past events</h4>
   <div class="row">
     <% @events.past.each do |event| %>
-    <div class="card col mt-3 mr-3 shadow p-3 mb-5 bg-white rounded" style="width: 18rem;">
+    <div class="card col-4 mt-2 shadow p-3 mb-5 bg-white rounded" style="width: 18rem;">
       <div class="card-body">
         <h5 class="card-title"><%= link_to event.name, event_path(event), class: "text-success" %></h5>
           <p class="card-text"><%= event.description %></p>
