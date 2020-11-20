@@ -1,24 +1,80 @@
-# README
+# Private-Events
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+In this project, I built a site similar to a private Eventbrite which allows users to create events and then manage user signups. Users can create events and send invitations and parties. Events take place at a specific date and at a location.
 
-Things you may want to cover:
 
-* Ruby version
+<div align="center">
 
-* System dependencies
+[![View Code](https://img.shields.io/badge/View%20-Code-green)](https://github.com/ahmadchata/private-events)
+[![Github Issues](https://img.shields.io/badge/GitHub-Issues-orange)](https://github.com/ahmadchata/private-events/issues)
+[![GitHub Pull Requests](https://img.shields.io/badge/GitHub-Pull%20Requests-blue)](https://github.com/ahmadchata/private-events/pulls)
 
-* Configuration
+</div>
 
-* Database creation
+## 📝 Contents
 
-* Database initialization
+<p align="center">
+<a href="#with">Built with</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="#gs">Getting started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="#author">Author</a>
+</p>
 
-* How to run the test suite
+## 🔧 Built with<a name = "with"></a>
 
-* Services (job queues, cache servers, search engines, etc.)
+- Ruby on Rails (Version: 6.0.3.4)
+- Ruby (Version: 2.7.2)
 
-* Deployment instructions
 
-* ...
+## Getting Started <a name = "gs"></a>
+
+To get a local copy of the repository please run the following commands on your terminal:
+
+```
+$ cd <folder>
+```
+
+~~~bash
+$ git clone git@github.com:ahmadchata/private-events.git
+$ cd private-events
+$ bundle install
+$ yarn install --check-files
+$ rails db:migrate
+~~~
+
+If you get an error installing dependencies:
+
+Change ruby version in Gemfile from 2.7.2 to version installed on your system
+
+then run
+
+```
+$ bundle install
+$ yarn install --check-files
+```
+
+
+## ✒️  Authors <a name = "author"></a>
+
+
+👤 **Ahmad Chata**
+
+- Github: [Ahmad Chata](https://github.com/ahmadchata)
+- Twitter: [@ahmadchata](https://twitter.com/ahmadchata)
+- Linkedin: [Ahmad Chata](https://www.linkedin.com/in/ahmadchata/)
+
+
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/ahmadchata/private-events/issues).
+
+
+## 👍 Show your support
+
+Give a ⭐️ if you like this project!
+
+## :clap: Acknowledgements
+
+- Microverse: [@microverse](https://www.microverse.org/)
