@@ -15,9 +15,19 @@
     </div>
     <div class="col">
       <h4>Upcoming events</h4>
+      <ul class="list-group">
+        <% @user.events.each do |event| %>
+          <li class="list-group-item"> <%= link_to event.name, event_path(event) %></li>
+        <% end %>
+      </ul>
     </div>
     <div class="col">
-      <h4>Attended events</h4>
+      <h4>Attended events: <%= @current_user.attended_events.count %></h4>
+      <ul class="list-group">
+        <% @user.attended_events.each do |event| %>
+        <li class="list-group-item"> <%= link_to event.name, event_path(event) %></li>
+        <% end %>
+      </ul>
     </div>
   </div>
 </div>
