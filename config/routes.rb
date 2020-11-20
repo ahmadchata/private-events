@@ -5,6 +5,12 @@ Rails.application.routes.draw do
   get 'login' => 'sessions#new', as: 'login'
   get 'logout' => 'sessions#destroy', as: 'logout'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :events do
+    member do
+      get 'attend'
+      get 'cancel'
+    end
+  end
   resources :users
   resources :events
   resources :sessions, only: [:new, :create, :destroy]
