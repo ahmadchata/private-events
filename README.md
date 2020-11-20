@@ -19,6 +19,10 @@ In this project, I built a site similar to a private Eventbrite which allows use
 <a href="#author">Author</a>
 </p>
 
+## Screenshot
+
+![screenshot](./app/assets/images/screen.png)
+
 ## 🔧 Built with<a name = "with"></a>
 
 - Ruby on Rails (Version: 6.0.3.4)
