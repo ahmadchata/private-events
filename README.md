@@ -19,7 +19,7 @@ In this project, I built a site similar to a private Eventbrite which allows use
 <a href="#author">Author</a>
 </p>
 
-## Screenshot
+## 📸 Screenshot
 
 ![screenshot](./app/assets/images/screen.png)
 
