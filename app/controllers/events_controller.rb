@@ -20,7 +20,7 @@ class EventsController < ApplicationController
       flash[:success] = "Event '#{@event.name}' created!"
       redirect_to @event
     else
-      flash[:alert] = "Something went wrong!"
+      flash[:alert] = 'Something went wrong!'
       render 'new'
     end
   end
@@ -28,16 +28,16 @@ class EventsController < ApplicationController
   def attend
     @event = Event.find(params[:id])
     if @event.attendees.include?(current_user)
-      redirect_to @event, notice: "You are already on the list"
+      redirect_to @event, notice: 'You are already on the list'
     else
       @event.attendees << current_user
-      redirect_to @event, notice: "Successful"
+      redirect_to @event, notice: 'Successful'
     end
   end
 
   def cancel
     @event = Event.find(params[:id])
     @event.attendees.delete(current_user)
-    redirect_to @event, notice: "You are no longer attending this event"
+    redirect_to @event, notice: 'You are no longer attending this event'
   end
 end

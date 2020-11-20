@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   root 'events#index'
 
@@ -13,5 +15,5 @@ Rails.application.routes.draw do
   end
   resources :users
   resources :events
-  resources :sessions, only: [:new, :create, :destroy]
+  resources :sessions, only: %i[new create destroy]
 end
