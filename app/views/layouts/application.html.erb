@@ -43,13 +43,6 @@
         <% end %>
       </form>
     </nav>
-    <% if flash[:errors] %>
-    <div class="bg-danger">
-      <% flash[:errors].each do |e| %>
-          <p class="errors"><%= e %></p>
-          <% end %>
-        </div>
-    <% end %>
     <%= yield %>
   </body>
 </html>
