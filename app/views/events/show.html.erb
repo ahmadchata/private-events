@@ -8,7 +8,7 @@
     <ul class="list-group list-group-flush">
       <li class="list-group-item">Hosted by: <%= @event.creator.name %></li>
       <li class="list-group-item">At: <%= @event.location %></li>
-      <li class="list-group-item">By: <%= @event.date %></li>
+      <li class="list-group-item">Date: <%= @event.date %></li>
     </ul>
     <div class="card-body">
       <a> <%= link_to 'Back to event list', root_path, class: "card-link mr-3" %></a>
