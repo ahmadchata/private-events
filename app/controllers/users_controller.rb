@@ -2,6 +2,10 @@ class UsersController < ApplicationController
   include UsersHelper
   before_action :require_login, except: %i[new create]
 
+  def index
+    @user = User.all
+  end
+
   def new
     @user = User.new
   end
