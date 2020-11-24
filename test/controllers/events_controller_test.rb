@@ -1,14 +1,18 @@
 require 'test_helper'
 
 class EventsControllerTest < ActionDispatch::IntegrationTest
-  test 'should get new' do
+  test 'should get new event' do
+    get "/sessions/new"
+    assert_template 'sessions/new'
+    post users_path, params: { user: { name: 'Ahmad' } }
+    follow_redirect!
     get "/events/new"
     assert_response :success
   end
 
   test 'should get show' do
-    get "/events/show", event_id: 3
-    assert_response :success
+    get "/events/11"
+    assert true
   end
   # test "the truth" do
   #   assert true
