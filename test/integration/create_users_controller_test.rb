@@ -2,14 +2,14 @@ require 'test_helper'
 
 class CreateUsersControllerTest < ActionDispatch::IntegrationTest
   test 'get user form and create user' do
-    get signup_path
+    get new_user_path
     assert_template 'users/new'
     assert_difference 'User.count', 1 do
-      post users_path, params: { user: { name: 'Ahmad2' } }
+      post users_path, params: { user: { name: 'Deepesh' } }
       follow_redirect!
     end
-    assert_template 'root_path'
-    assert_match 'Ahmad2', response.body
+    assert_template 'layouts/application'
+    assert_match 'Deepesh', response.body
   end
   # test "the truth" do
   #   assert true
