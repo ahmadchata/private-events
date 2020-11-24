@@ -10,6 +10,39 @@
   </head>
 
   <body>
+    <% if flash[:notice] %>
+      <div class="bg-success">
+        <p class="notice"><%= notice %></p>
+      </div>
+    <% end %>
+    <% if flash[:alert] %>
+      <div class="bg-danger">
+        <p class="alert"><%= alert %></p>
+      </div>
+    <% end %>
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand"><%= link_to "Eventmania", root_path, class: "navbar-brand" %></a>
+      <form class="form-inline">
+        <p>
+          <%= link_to 'Create Event', new_event_path, class: "btn btn-outline-success mr-2 my-2 my-sm-0" %>
+        </p>
+        <% if current_user %>
+            <p class="control">
+              <%= link_to current_user.name, user_path(current_user), class: "btn btn-outline-success mr-2 my-2 my-sm-0" %>
+            </p>
+            <p>
+              <%= link_to "Logout", logout_path, class: "btn btn-outline-success mr-2 my-2 my-sm-0" %>
+            </p>
+            <% else %>
+        <p>
+          <%= link_to 'Sign In', login_path, class: "btn btn-outline-success mr-2 my-2 my-sm-0" %>
+        </p>
+        <p>
+          <%= link_to 'Sign Up', signup_path, class: "btn btn-outline-success mr-2 my-2 my-sm-0" %>
+        </p>
+        <% end %>
+      </form>
+    </nav>
     <%= yield %>
   </body>
 </html>

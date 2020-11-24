@@ -1,0 +1,11 @@
+<div class="container">
+  <h1 class="text-center">Create new Event</h1>
+      <% if flash[:errors] %>
+    <div class="bg-danger">
+      <% flash[:errors].each do |e| %>
+          <p class="errors"><%= e %></p>
+          <% end %>
+        </div>
+    <% end %>
+  <%= render 'form', event: @event %>
+</div>
