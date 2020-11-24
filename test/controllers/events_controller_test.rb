@@ -7,7 +7,7 @@ class EventsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should get show' do
-    get event_path
+    get "/events/show", event_id: 3
     assert_response :success
   end
   # test "the truth" do
