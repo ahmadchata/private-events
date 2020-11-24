@@ -57,6 +57,13 @@ $ bundle install
 $ yarn install --check-files
 ```
 
+## To run Tests
+
+~~~bash
+$ rails db:migrate RAILS_ENV=test
+$ rails test
+~~~
+
 
 ## ✒️  Authors <a name = "author"></a>
 
